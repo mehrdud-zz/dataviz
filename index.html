@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>WPAP Architecture</title>
+		<link type="text/css" href="file://worldpay.local/HomeDrives/M-R/NATEGHIANM199/Documents/Projects/WPAP/Architecture/base.css" rel="stylesheet" />
+		<link type="text/css" href="file://worldpay.local/HomeDrives/M-R/NATEGHIANM199/Documents/Projects/WPAP/Architecture/Treemap.css" rel="stylesheet" />
+		<script type="text/javascript" src="file://worldpay.local/HomeDrives/M-R/NATEGHIANM199/Documents/Projects/WPAP/Architecture/jit.js"></script>
+		<script type="text/javascript" src="file://worldpay.local/HomeDrives/M-R/NATEGHIANM199/Documents/Projects/WPAP/Architecture/wpap_achitecture.js"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />	
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>		
+		<div id="center-container">
+			<div id="infovis"></div>
+			<hr />
+			<div style="display:none;visibility:hidden;">
+				<input type="radio" name="groupingType" value="Domain" checked="checked" onchange="init('Product', 'Type', 0);">Domain</input>
+				<input type="radio" name="groupingType" value="Layer" onchange="init('Layer', 'Product', 1);">Layer</input>
+				<input type="radio" name="groupingType" value="Type" onchange="init('Type', 'Product', 1);">Type</input>
+				<input type="radio" name="groupingType" value="Product" onchange="init('Product', 'Type', 1);">Product</input>			
+			</div>
+		</div>    
+	</body>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	
+	var RawData = [];
+	$.getJSON('file://worldpay.local/HomeDrives/M-R/NATEGHIANM199/Documents/Projects/WPAP/Architecture/system_components.json', function(data) {
+        RawData = data.items;
+        console.log(myItems);
+
+	// init('Domain', 'Layer', 0, RawData);
+	 });
+	});
+	</script>
+</html>
